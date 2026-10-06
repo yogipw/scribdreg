@@ -1,0 +1,3 @@
+# Tidak dipakai — GoPay only.
+# Jika butuh VCC manual, isi per baris: card|MM|YY|cvv|nama
+# Contoh: 4111111111111111|12|28|123|Test User

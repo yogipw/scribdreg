@@ -1,0 +1,17 @@
+{
+  "name": "scribdreg",
+  "version": "1.0.0",
+  "description": "Scribd auto trial GoPay — Camoufox + Midtrans Snap",
+  "main": "scribd-register.js",
+  "scripts": {
+    "scribd": "node scribd-register.js",
+    "api": "node scribd-api.js",
+    "sniff": "python sniff-manual.py",
+    "camoufox:fetch": "npx camoufox fetch"
+  },
+  "type": "module",
+  "dependencies": {
+    "camoufox": "^0.1.19",
+    "playwright-core": "^1.62.0"
+  }
+}

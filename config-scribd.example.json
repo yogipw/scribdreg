@@ -1,0 +1,159 @@
+{
+  "signup_via_trial_link": {
+    "enabled": true,
+    "entry_pages": [
+      "https://www.scribd.com/subscribe",
+      "https://www.scribd.com/"
+    ],
+    "link_texts": [
+      "download free for 30 days",
+      "start free trial",
+      "free for 30 days",
+      "read free for 30 days",
+      "try free for 30 days",
+      "free trial"
+    ],
+    "fallback_signup_url": "https://www.scribd.com/oauth/signup",
+    "wait_seconds": 300
+  },
+  "payment_url": "https://www.scribd.com/checkout",
+  "plan": "monthly",
+  "gopay": {
+    "auto_fill": true,
+    "phone": "",
+    "pin": "",
+    "otp_timeout_seconds": 120
+  },
+  "turnstile_solver": {
+    "provider": "2captcha",
+    "api_key": "",
+    "timeout_seconds": 180
+  },
+  "mule_headless": true,
+  "captcha_restart": {
+    "enabled": true,
+    "unsolved_timeout_seconds": 120,
+    "max_restarts": 2,
+    "cloudflare_timeout_seconds": 30
+  },
+  "cf_solver": {
+    "enabled": true,
+    "click_rounds": 3,
+    "sleep_time": 5
+  },
+  "headless": false,
+  "keep_open_seconds": 5,
+  "proxy": "",
+  "proxy_country": "us",
+  "timeout_seconds": 15,
+  "delay_between_accounts_ms": 5000,
+  "max_retries_per_account": 1,
+  "retry_delay_ms": 3000,
+  "run_count": 1,
+  "results_file": "results-scribd.jsonl",
+  "temp_email": {
+    "enabled": true,
+    "providers": [
+      "tempmaillol",
+      "guerrilla",
+      "mailgw"
+    ]
+  },
+  "email_verification": {
+    "enabled": true,
+    "timeout_seconds": 90,
+    "poll_interval_ms": 3000
+  },
+  "browser": {
+    "engine": "camoufox",
+    "reuse_profile": false,
+    "profiles_root": "profiles",
+    "profile_dir": "camoufox-profile",
+    "camoufox": {
+      "os": "windows",
+      "humanize": 2.5,
+      "locale": "en-US",
+      "geoip": false,
+      "block_webrtc": true,
+      "block_images": false,
+      "disable_coop": true,
+      "random_window": true,
+      "debug": false,
+      "screen": {
+        "minWidth": 1366,
+        "maxWidth": 1920,
+        "minHeight": 768,
+        "maxHeight": 1080
+      }
+    }
+  },
+  "pre_signup_captcha": {
+    "enabled": false,
+    "timeout_seconds": 300
+  },
+  "manual_captcha": {
+    "enabled": true,
+    "timeout_seconds": 300,
+    "stabilize_seconds": 1
+  },
+  "manual_payment": {
+    "enabled": true,
+    "timeout_seconds": 300,
+    "select_timeout_seconds": 90
+  },
+  "captcha_safe": {
+    "enabled": true,
+    "manual_entry_click": false,
+    "no_bot_touch_signup": false,
+    "no_cdp_inject": true
+  },
+  "manual_signup": {
+    "enabled": false
+  },
+  "form_fill": {
+    "mode": "auto",
+    "use_paste": false,
+    "type_delay_min": 10,
+    "type_delay_max": 25,
+    "pre_click_ms": 50
+  },
+  "selectors": {
+    "email": "#email",
+    "password": "#password",
+    "name": "input[name='name'], input[name='full_name'], input[autocomplete='name']",
+    "continue_button": "button[type='submit'][name='action'], button[type='submit'], button[data-e2e='continue'], .btn-primary",
+    "checkout_continue_trial": "button[data-e2e='standard-plan-cta']",
+    "start_trial_button": "a[href*='subscribe'], button:has-text(\"trial\"), a:has-text(\"trial\")",
+    "submit_payment": "button[data-e2e='payment-submit'], button[data-e2e='submit-payment'], button[data-e2e='submit'], button[type='submit'], button[data-testid='submit']"
+  },
+  "success_contains": [
+    "welcome to your free trial",
+    "billing information has been updated",
+    "trial activated",
+    "subscription active",
+    "your subscription",
+    "start reading"
+  ],
+  "success_url_contains": [
+    "/home",
+    "/library",
+    "/read/",
+    "/account",
+    "/documents",
+    "/books",
+    "/audiobooks"
+  ],
+  "verify_url_contains": [
+    "/verify",
+    "/confirm",
+    "/callback",
+    "/oauth/verify",
+    "/activate"
+  ],
+  "error_contains": [
+    "declined",
+    "error",
+    "invalid",
+    "try again"
+  ]
+}

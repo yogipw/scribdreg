@@ -1,0 +1,19 @@
+node_modules/
+profiles/
+chrome-profile/
+camoufox-profile/
+__pycache__/
+*.pyc
+
+# Kredensial lokal — jangan commit nomor/PIN/key asli.
+# Commit config-scribd.example.json saja.
+config-scribd.json
+
+# Hasil & log lokal (berisi email/password akun)
+results-scribd.jsonl
+scribd-api.log
+sniff-*.jsonl
+_tmp_*
+dbg_*
+*.png
+*.rar
